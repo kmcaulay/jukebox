@@ -20,7 +20,9 @@ $.each(obj, function(key, element) {
 // 		Jukebox.switchRecord(-1)
 // 		})
 
-
+	$.each(jukebox, function(songs){
+		$('.list').append(songs)
+	})
 
 
 

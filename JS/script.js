@@ -45,6 +45,14 @@
 		this.pause = function(){
 			player.pause();
 		}
+// function for random track
+		this.random = function(){
+			var i = 0
+			this.currentSong = this.songs[Math.floor(Math.random() * songs.length)];
+			this.currentSong = this.sons[i].src
+			this.play()
+			console.log(currentSong)
+		}
 	}
 
 
@@ -55,8 +63,8 @@
 	var song2 = new Song('Million Words', 'Better Living Radio', 'https://ia800301.us.archive.org/6/items/Better.Living.Radio.Theatre/BLRT_53-xx-xx_01_A_Million_Words_A_Million_Songs.mp3')
 	var song3 = new Song('Big Inheritance', 'AbbotCostello', 'https://ia800500.us.archive.org/1/items/AbbottCostello_733/AbbottCostello-costellosBigInheritance-1948-01-23.mp3')
 	var song4 = new Song('Kings Justice', 'Adventure of Zorro', 'https://ia800304.us.archive.org/35/items/AdventuresOfZorro/Zorro-570000_4KingsJustice.mp3')
-	var song5 = new Song('', '', '')
-	var song6 = new Song('', '', '')
+	var song5 = new Song('The Blank Wall', 'Whistler', 'https://ia800307.us.archive.org/10/items/OTRR_Whistler_Singles/Whistler_43-06-26_ep058_The_Blank_Wall.mp3')
+	var song6 = new Song('Crime Classics', 'Roger Nems', 'https://ia801405.us.archive.org/6/items/OTRR_Crime_Classics_Singles/cric_54-03-03_ep35_Roger_Nems_-_How_He_Though_Dead_Won_The_Game.mp3')
 
 jukebox.addSongs(song1)
 jukebox.addSongs(song2)

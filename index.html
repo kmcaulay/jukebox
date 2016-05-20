@@ -3,7 +3,7 @@
 <head>
 	<title>JukeBox</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -13,15 +13,18 @@
 		<button id="pauseSong" onclick="jukebox.pause()">Pause</button>
 		<button id="nextSong" onclick="jukebox.nextSong()">Next</button>
 		<button id="previousSong" onclick="jukebox.previousSong()">Previous</button>
-		<button id="volumeUp" onclick="">Vol Up</button>
-		<button id="volumeDown" onclick="">Vol Down</button>
+		<button id="ranSong" onclick="jukebox.random()">Random Show</button>
+		<div>
+			
 		<!-- jquery add playlist with current track playing -->
-		<ul>
-			<!-- <li class="list"></li> -->
-		</ul>
+			<h3>Tracks</h3>
+			<ul>
+				<!-- <li class="list"></li> -->
+			</ul>
+		</div>
 	</div>
-		<br>
-		<br>
+
+		<!-- invisible audio file -->
 		<audio id="song" src="https://ia801406.us.archive.org/16/items/TalesOfTheTexasRangers/Texas_Rangers_1950_07_22_03_Apache_Peak.mp3" type="audio/mpeg" preload="auto"></audio>
 	<div id="body">
 		<div id="form">
