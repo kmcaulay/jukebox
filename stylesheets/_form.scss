@@ -9,3 +9,14 @@
 	position: fixed;
 	bottom: 0;
 }
+
+#submit{
+	border-radius: 10px;
+  color: #F9E0A9;
+  background-color: #363F4B;
+}
+
+#submit:hover{
+	background-color: white;
+	cursor: pointer;
+}

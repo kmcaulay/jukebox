@@ -10,12 +10,12 @@
 
 .button{
 	border-radius: 10px;
-	// width: 80%;
-	color: #949494;
+  color: #F9E0A9;
+  background-color: #363F4B;
 }
 
 .button:hover {
-    color: #F9E0A9;
-    background-color: #363F4B;
+	background-color: white;
+	cursor: pointer;
 }
 

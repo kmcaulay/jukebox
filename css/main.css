@@ -7,6 +7,15 @@
   position: fixed;
   bottom: 0; }
 
+#submit {
+  border-radius: 10px;
+  color: #F9E0A9;
+  background-color: #363F4B; }
+
+#submit:hover {
+  background-color: white;
+  cursor: pointer; }
+
 #header {
   left: 0;
   width: 20%;
@@ -18,11 +27,12 @@
 
 .button {
   border-radius: 10px;
-  color: #949494; }
-
-.button:hover {
   color: #F9E0A9;
   background-color: #363F4B; }
+
+.button:hover {
+  background-color: white;
+  cursor: pointer; }
 
 body {
   background-image: url("../images/mickey.gif");

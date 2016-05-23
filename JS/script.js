@@ -108,7 +108,7 @@ jukebox.addSongs(song6)
 // loop to add songs to html
 // += allows the loop to add more than one html tag to document
 for (i=0; i<jukebox.songs.length; i++){
-	// console.log(jukebox.songs[i].artist)
+	console.log("looping")
 	document.getElementById('tracks').innerHTML += "<p>" + jukebox.songs[i].artist + "</p><br>"
 }
 	
