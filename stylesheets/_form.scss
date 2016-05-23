@@ -1,13 +1,16 @@
-
+$yellow: #F9E0A9;
 
 #formdiv{
 	background-color: #051120;
 	opacity: .75;
 	width: 100%;
-	height: 100px;
+	height: 90px;
 	padding: 50px;
 	position: fixed;
 	bottom: 0;
+	text-align: center;
+	z-index: 0;
+	margin: 0;
 }
 
 #submit{
@@ -19,4 +22,15 @@
 #submit:hover{
 	background-color: white;
 	cursor: pointer;
+}
+
+@media all and (max-width: 400px){
+	#formdiv{
+		text-align: left;
+		margin: 0;
+		width: 100%;
+		#form{
+			text-align: left;
+		}
+	}
 }

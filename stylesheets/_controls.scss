@@ -3,9 +3,11 @@
 	width: 20%;
 	background-color: #051120;
 	opacity: .75;
-	height: 450px;
+	height: 470px;
 	text-align: center;
 	margin: 0;
+	z-index: 4;
+	position: relative;
 }
 
 .button{
@@ -17,5 +19,20 @@
 .button:hover {
 	background-color: white;
 	cursor: pointer;
+}
+
+#tracks{
+	cursor: pointer;
+}
+@media (min-width: 400px) and (max-width: 650px){
+	#header{
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 400px){
+	#header{
+		width: 100%;
+	}
 }
 

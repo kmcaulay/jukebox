@@ -1,28 +1,26 @@
 @import 'form';
 @import 'controls';
 $yellow: #F9E0A9;
+// large devises, desktops
+@media all{
+	body{
+		background-image: url("../images/mickey.gif");
+		background-size: cover;
+		background-repeat: no-repeat; 
+		background-color: #cccccc;
+		color: $yellow;
+		font-family: 'Oswald', sans-serif;
+	}
 
+	#body{
+		text-align: center;
+		z-index: 1;
+		margin: 0 auto;
+	}
 
-body{
-	background-image: url("../images/mickey.gif");
-	background-size: cover;
-	background-repeat: no-repeat; 
-	background-color: #cccccc;
-	color: $yellow;
-	font-family: 'Oswald', sans-serif;
+	#tracks p{
+		color: $yellow;
+		margin: 0;
+	}
+
 }
-
-
-
-#body{
-	text-align: center;
-	z-index: 1;
-	margin: 0 auto;
-}
-
-#tracks p{
-	color: $yellow;
-	margin: 0;
-
-}
-

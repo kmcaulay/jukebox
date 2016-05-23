@@ -21,20 +21,24 @@ var Jukebox = function(){
 		var artist = document.getElementById('artist').value;
 		var src = document.getElementById('src').value;
 // setting elements to variable
+
 		var banana = new Song(title, artist, src)
 			console.log(banana)
 			this.songs.push(banana)
 			console.log(jukebox.songs)
+			document.getElementById('tracks').innerHTML += "<p onclick=jukebox.otherPlay(" + i + ") id=" + i + ">" + artist + "</p><br>"
 	}
+
+
+
 
 // add songs in preloaded js file
 	this.addSongs = function(song){
 		console.log("addingggg songs")
-		// var x = new Song(title, artist, src)
 		this.songs.push(song)
 	}
 
-// yay plays next song in object
+// plays next song in object
 	this.nextSong = function(){
 		console.log('nexxxt')
 		this.currentSong = this.songs[i];
@@ -43,7 +47,7 @@ var Jukebox = function(){
 		this.play();
 	}
 
-// yay plays previous song in object
+// plays previous song in object
 	this.previousSong = function(){
 		console.log('before')
 		this.currentSong = this.songs[i];
@@ -52,39 +56,44 @@ var Jukebox = function(){
 		this.play();
 	}
 
-// yay this plays songs
+// this plays songs
 	this.play = function(){
 		console.log('playyyyy');
 		player.play();
 	}
 
-// yay this pauses songs
+// this pauses songs
 	this.pause = function(){
 		console.log("pauseee")
 		player.pause();
 	}
 
-// yay stops song
+// stops song
 	this.stop = function(){
 		console.log("stopppppppp")
 		player.pause();
 		player.currentTime = 0.0;
 	}
 
-// function for random track
+// random track
 	this.random = function(){
 		console.log("randooooo")
-		// var i = 0;
 		this.currentSong = this.songs[Math.floor(Math.random() * this.songs.length)];
 		player.setAttribute('src', this.currentSong.src)
-		// console.log(this.currentSong)
 			this.play()
-		}
-// display playlist
+	}
+	
+// clickable displayed link
+	this.otherPlay = function(i){
+		console.log("otherrrrrr")
+		console.log(i)
+		player.setAttribute('src', this.songs[i].src)
+		this.play()
+	}
 
+
+	// player.play().onended(this.nextSong)
 }
-
-
 
 // new instance of my Jukebox object
 var jukebox = new Jukebox();
@@ -105,13 +114,16 @@ jukebox.addSongs(song4)
 jukebox.addSongs(song5)
 jukebox.addSongs(song6)
 
+// display preloaded playlist
 // loop to add songs to html
 // += allows the loop to add more than one html tag to document
 for (i=0; i<jukebox.songs.length; i++){
 	console.log("looping")
-	document.getElementById('tracks').innerHTML += "<p>" + jukebox.songs[i].artist + "</p><br>"
+	document.getElementById('tracks').innerHTML += "<p onclick=jukebox.otherPlay(" + i + ") id=" + i + ">" + jukebox.songs[i].artist + "</p><br>"
 }
-	
+
+
+
 
 
 
