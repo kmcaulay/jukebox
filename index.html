@@ -8,35 +8,39 @@
 </head>
 <body>
 	<div id="header">
-		<h1>JukeBox</h1>
-		<button id="playSong" onclick="jukebox.play()">Play</button>
-		<button id="pauseSong" onclick="jukebox.pause()">Pause</button>
-		<button id="nextSong" onclick="jukebox.nextSong()">Next</button>
-		<button id="previousSong" onclick="jukebox.previousSong()">Previous</button>
-		<button id="ranSong" onclick="jukebox.random()">Random Show</button>
-		<div>
+	<!-- controls -->
+		<!-- play -->
+		<button class="button" id="playSong" onclick="jukebox.play()">Play</button>
+		<!-- pause -->
+		<button class="button" id="pauseSong" onclick="jukebox.pause()">Pause</button>
+		<!-- stop -->
+		<button class="button" id="stopSong" onclick="jukebox.stop()">Stop</button>
+		<!-- next -->
+		<button class="button" id="nextSong" onclick="jukebox.nextSong()">Next</button>
+		<!-- previous -->
+		<button class="button" id="previousSong" onclick="jukebox.previousSong()">Previous</button>
+		<!-- random track -->
+		<button class="button" id="ranSong" onclick="jukebox.random()">Random Show</button><br>
+		<hr>
+		<!-- displays preloaded tracks -->
+		<h3>Avaiable Shows</h3>
+		<hr>
+			<div id='tracks'>
+			</div>
 			
-		<!-- jquery add playlist with current track playing -->
-			<h3>Tracks</h3>
-			<ul>
-				<!-- <li class="list"></li> -->
-			</ul>
-		</div>
 	</div>
-
 		<!-- invisible audio file -->
 		<audio id="song" src="https://ia801406.us.archive.org/16/items/TalesOfTheTexasRangers/Texas_Rangers_1950_07_22_03_Apache_Peak.mp3" type="audio/mpeg" preload="auto"></audio>
+	<!-- everything below list of tracks -->
 	<div id="body">
-		<div id="form">
-			<form>
-				<h3>Add new tracks here!</h3>
-				<label>Title</label>
-				<input type="text" name="title">
-				<label>Artist</label>
-				<input type="text" name="artist">
-				<label>MP3 url</label>
-				<input type="url" name="src">
-				<input type="submit" value="submit">
+		<div id="formdiv">
+		<!-- add tracks -->
+			<form id="form">
+				<h3>Add new shows here!</h3>
+				Show Title: <input type="text" name="title" id="title">
+				Episode Title: <input type="text" name="artist" id="artist">
+				mp3 url: <input type="url" name="src" id="src"><br>
+				<input type="button" value="submit" onclick="jukebox.addSong()">
 			</form>
 		</div>
 	</div>

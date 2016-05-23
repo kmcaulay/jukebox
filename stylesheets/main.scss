@@ -1,19 +1,18 @@
 @import 'form';
 @import 'controls';
+$yellow: #F9E0A9;
+
 
 body{
 	background-image: url("../images/mickey.gif");
-	background-size: 100%;
+	background-size: cover;
+	background-repeat: no-repeat; 
 	background-color: #cccccc;
-	color: #CD333F;
+	color: $yellow;
 	font-family: 'Oswald', sans-serif;
 }
 
-#header{
-	height: 50%;
-	width: 100%;
-	text-align: center;
-}
+
 
 #body{
 	text-align: center;
@@ -21,3 +20,8 @@ body{
 	margin: 0 auto;
 }
 
+#tracks p{
+	color: $yellow;
+	margin: 0;
+
+}
